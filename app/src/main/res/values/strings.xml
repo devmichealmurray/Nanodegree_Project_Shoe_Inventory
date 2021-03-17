@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+
+    <!-- Login Activity -->
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="create_account">Create Account</string>
+
+    <!-- Main Activity -->
+    <string name="shoe_store">Shoe Store</string>
+
+    <!-- Welcome Fragment -->
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions</string>
+
+    <!-- Instructions Fragment -->
+    <string name="go_to_shoe_list_button">Show Me Those Shoes!</string>
+
+    <!-- Shoe List Fragment -->
+    <string name="shoe_list">Shoe List</string>
+    <string name="add_shoe_description">Button To Add A New Shoe To The List</string>
+
+
+</resources>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Login Fragment -->
+    <style name="TitleLogo">
+        <item name="fontFamily">@font/bangers_reg</item>
+        <item name="android:textSize">98sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Welcome Fragment -->
+    <style name="Welcome" parent="TitleLogo">
+        <item name="fontFamily">@font/bangers_reg</item>
+        <item name="android:textSize">98sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="WelcomeName" parent="Welcome">
+        <item name="fontFamily">@font/bangers_reg</item>
+        <item name="android:textSize">64sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="WelcomeLogo" parent="TitleLogo">
+        <item name="fontFamily">@font/bangers_reg</item>
+        <item name="android:textSize">168sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/trans_gray</item>
+    </style>
+
+    <!-- Instructions Fragment -->
+    <style name="InstructionsHeader" parent="Welcome">
+        <item name="android:textSize">58sp</item>
+    </style>
+
+    <style name="InstructionsText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Shoe List Fragment -->
+    <style name="ShoeListHeader" parent="Welcome">
+        <item name="android:textSize">38sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="EditTextFields">
+        <item name="android:background">@drawable/shape_edittext_background</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:backgroundTint">@color/colorAccent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:background">@drawable/shape_buttons</item>
+    </style>
+
+    <style name="ToolBarTitle">
+        <item name="fontFamily">@font/bangers_reg</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+</resources>
