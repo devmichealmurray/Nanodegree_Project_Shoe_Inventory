@@ -12,7 +12,6 @@
             type="com.udacity.shoestore.models.Shoe" />
     </data>
 
-    <!-- Layout Choices -->
     <!-- For this fragment, I have again, chosen a constraint layout. Three of the five child views
     (header, subheader, cardview and two buttons) are arranged vertical over one another, but like
     the Login Fragment, we have two buttons arranged horizontally. I could have used a vertical
