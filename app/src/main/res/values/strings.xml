@@ -1,15 +1,15 @@
 <resources>
     <string name="app_name">ShoeStore</string>
 
-    <!-- Login Activity -->
+    <!-- Main Activity -->
+    <string name="shoe_store">Shoe Store</string>
+
+    <!-- Login Fragment -->
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="log_in">Log In</string>
     <string name="create_account">Create Account</string>
-
-    <!-- Main Activity -->
-    <string name="shoe_store">Shoe Store</string>
 
     <!-- Welcome Fragment -->
     <string name="welcome">Welcome</string>
@@ -21,6 +21,21 @@
     <!-- Shoe List Fragment -->
     <string name="shoe_list">Shoe List</string>
     <string name="add_shoe_description">Button To Add A New Shoe To The List</string>
+
+    <!-- Shoe Details Fragment -->
+    <string name="shoe_details">Shoe Details</string>
+    <string name="shoe_details_subheader">Input The Details Of Your Shoes!</string>
+    <string name="cancel">CANCEL</string>
+    <string name="save">SAVE</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_description">Shoe Description</string>
+
+    <!-- Shoe Item -->
+    <string name="size">Size Available:</string>
+    <string name="error">Error!</string>
+    <string name="ok">Okay</string>
 
 
 </resources>

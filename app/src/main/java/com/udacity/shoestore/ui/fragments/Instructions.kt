@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
@@ -18,7 +19,8 @@ class Instructions: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentInstructionsBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil
+            .inflate(inflater, R.layout.fragment_instructions, container, false)
         binding.fragment = this
         return binding.root
     }

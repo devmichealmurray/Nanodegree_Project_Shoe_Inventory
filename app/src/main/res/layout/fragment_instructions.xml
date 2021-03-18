@@ -25,7 +25,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/instuctions_card"
+            android:id="@+id/instructions_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -36,7 +36,7 @@
 
 
             <LinearLayout
-                android:id="@+id/instuctions_card_layout"
+                android:id="@+id/instructions_card_layout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimaryDark"

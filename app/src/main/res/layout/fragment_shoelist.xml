@@ -3,6 +3,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="fragment"
+            type="com.udacity.shoestore.ui.fragments.ShoeList" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:layout_width="match_parent"
@@ -22,6 +28,7 @@
             android:id="@+id/shoe_list_scrollView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:background="@color/trans_gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,12 +38,10 @@
                 android:id="@+id/scrollView_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/white"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="This is the shoe list fragment container"/>
+
 
             </LinearLayout>
 
@@ -48,6 +53,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_add"
             android:layout_margin="24dp"
+            android:clickable="true"
+            android:onClick="@{() -> fragment.onFabClick()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:contentDescription="@string/add_shoe_description"/>

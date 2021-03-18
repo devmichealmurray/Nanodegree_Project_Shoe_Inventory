@@ -2,14 +2,14 @@ package com.udacity.shoestore.ui.fragments
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.udacity.shoestore.ui.MainViewModel
+import androidx.lifecycle.ViewModel
 
-class WelcomeViewModel: MainViewModel() {
+class WelcomeViewModel: ViewModel() {
 
     private val _userName by lazy { MutableLiveData<String>() }
     val userName: LiveData<String> get() = _userName
 
-    fun setNameFromBundle(bundleName: String) {
-        _userName.value = bundleName
+    fun setNameFromArgs(userName: String) {
+        _userName.value = userName
     }
 }
