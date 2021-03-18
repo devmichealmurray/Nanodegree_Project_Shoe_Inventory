@@ -11,7 +11,7 @@
 
         <variable
             name="fragment"
-            type="com.udacity.shoestore.ui.fragments.Welcome" />
+            type="com.udacity.shoestore.ui.fragments.WelcomeFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -3,6 +3,7 @@
 
     <!-- Main Activity -->
     <string name="shoe_store">Shoe Store</string>
+    <string name="log_out">Log Out</string>
 
     <!-- Login Fragment -->
     <string name="name">Name</string>
@@ -11,12 +12,22 @@
     <string name="log_in">Log In</string>
     <string name="create_account">Create Account</string>
 
+
     <!-- Welcome Fragment -->
     <string name="welcome">Welcome</string>
     <string name="instructions">Instructions</string>
 
     <!-- Instructions Fragment -->
     <string name="go_to_shoe_list_button">Show Me Those Shoes!</string>
+    <string name="the_instructions">Welcome to the Shoe Store Inventory Instructions! When you are ready,
+        click the "Show Me Those Shoes!" button below. On the next screen you will find a list that should
+    already have a few entries to help you get started. By clicking the "Add" button with the plus sign, in the
+    lower right corner, you will be directed to a new screen where you can add the details of the shoes you
+    would like to add to the list. Please remember that ALL detail fields must be filled in or the new entry will
+    be rejected. Once all fields are completed, just press save! If you should find yourself on the entry screen, but
+    do not need to be, just press cancel and you will be returned to the list screen. When you are done, remember to
+    log out. You can do this by clicking on the menu option in the top right corner of the screen and selecting
+    "Log Out." Good Luck!</string>
 
     <!-- Shoe List Fragment -->
     <string name="shoe_list">Shoe List</string>
@@ -25,7 +36,7 @@
     <!-- Shoe Details Fragment -->
     <string name="shoe_details">Shoe Details</string>
     <string name="shoe_details_subheader">Input The Details Of Your Shoes!</string>
-    <string name="cancel">CANCEL</string>
+    <string name="cancel">Cancel</string>
     <string name="save">SAVE</string>
     <string name="shoe_name">Shoe Name</string>
     <string name="shoe_company">Shoe Company</string>
@@ -36,6 +47,7 @@
     <string name="size">Size Available:</string>
     <string name="error">Error!</string>
     <string name="ok">Okay</string>
+
 
 
 </resources>

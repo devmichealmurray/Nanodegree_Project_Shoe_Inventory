@@ -1,10 +1,10 @@
 package com.udacity.shoestore.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -13,8 +13,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoelistBinding
 import com.udacity.shoestore.databinding.ItemShoeBinding
 import com.udacity.shoestore.models.Shoe
-
-private const val TAG = "SHOE LIST"
 
 class ShoeList: Fragment() {
 
@@ -26,15 +24,13 @@ class ShoeList: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentShoelistBinding.inflate(inflater, container, false)
+        binding = DataBindingUtil
+            .inflate(inflater, R.layout.fragment_shoelist, container, false)
         shoeViewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
-        binding.fragment = this
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
         shoeViewModel.shoeList.observe(viewLifecycleOwner, shoeListObserver)
+        binding.fragment = this
+
+        return binding.root
     }
 
     fun onFabClick() {
@@ -43,7 +39,6 @@ class ShoeList: Fragment() {
 
     private val shoeListObserver = Observer<MutableList<Shoe>> { shoeList ->
         for (shoe in shoeList) {
-            Log.d(TAG, "============== Shoe: ${shoe.name} ===============")
             val itemBinding = ItemShoeBinding.inflate(layoutInflater, null, false)
             itemBinding.shoe = shoe
             binding.scrollViewLayout.addView(itemBinding.root)

@@ -12,4 +12,5 @@ class WelcomeViewModel: ViewModel() {
     fun setNameFromArgs(userName: String) {
         _userName.value = userName
     }
+
 }
