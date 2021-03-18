@@ -7,7 +7,20 @@
         <variable
             name="fragment"
             type="com.udacity.shoestore.ui.fragments.ShoeDetail" />
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
     </data>
+
+    <!-- Layout Choices -->
+    <!-- For this fragment, I have again, chosen a constraint layout. Three of the five child views
+    (header, subheader, cardview and two buttons) are arranged vertical over one another, but like
+    the Login Fragment, we have two buttons arranged horizontally. I could have used a vertical
+    linear layout and nested a horizontal linear layout, but since I have already chosen to nest
+    the edit text views in a cardview for design purposes, there is no justification for creating
+    yet another nested layout that has to be traversed by the system. I have used a linear layout
+    in the cardview, because a cardview requires a layout and the four edit text fields are aligned
+    in a simple vertical fashion. -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -60,6 +73,7 @@
                     style="@style/EditTextFields"
                     android:layout_margin="8dp"
                     android:padding="8dp"
+                    android:text="@={shoe.name}"
                     android:inputType="text"
                     android:maxLines="1"
                     android:layout_width="match_parent"
@@ -73,6 +87,7 @@
                     style="@style/EditTextFields"
                     android:layout_margin="8dp"
                     android:padding="8dp"
+                    android:text="@={shoe.company}"
                     android:inputType="text"
                     android:maxLines="1"
                     android:layout_width="match_parent"
@@ -86,6 +101,7 @@
                     style="@style/EditTextFields"
                     android:layout_margin="8dp"
                     android:padding="8dp"
+                    android:text="@={shoe.size}"
                     android:inputType="number"
                     android:maxLines="1"
                     android:layout_width="match_parent"
@@ -100,6 +116,7 @@
                     android:layout_margin="8dp"
                     android:padding="8dp"
                     android:inputType="text"
+                    android:text="@={shoe.size}"
                     android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

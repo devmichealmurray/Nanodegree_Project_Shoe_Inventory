@@ -8,6 +8,13 @@
             type="com.udacity.shoestore.ui.fragments.ShoeList" />
     </data>
 
+    <!-- Here I have chosen to use primarily for the Floating Action Button. A frame layout could
+    have been used to achieve the same effect, but Frame Layouts were primarily design to host only
+    one child view.
+    Source:
+https://developer.android.com/reference/android/widget/FrameLayout#:~:text=FrameLayout%20is%20designed%20to%20block,the%20children%20overlapping%20each%20other.
+    -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,9 +32,8 @@
         <ScrollView
             android:id="@+id/shoe_list_scrollView"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:background="@color/trans_gray"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/shoe_list_header">

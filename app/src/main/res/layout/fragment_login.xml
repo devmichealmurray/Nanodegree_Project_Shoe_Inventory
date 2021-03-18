@@ -10,6 +10,11 @@
             type="com.udacity.shoestore.ui.fragments.LoginFragment" />
     </data>
 
+<!-- Here I have chosen to use ConstraintLayout because I have two buttons beside one
+another in a horizontal fashion, directly below three editText widgets arranged vertically.
+I could have used nested layouts (vertical Linear layout for the logo and editText and nest a
+horizontal Linear Layout for the buttons), but it makes more sense to use only the constraint
+layout, since it will achieve the desired effect with less strain on the system. -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

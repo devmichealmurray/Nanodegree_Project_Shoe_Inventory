@@ -9,19 +9,27 @@
             type="com.udacity.shoestore.ui.fragments.Instructions" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- For this fragment, I have chosen to use two Linear Layouts, even though LL can "slow the
+    speed of measurement" because the design is simple. One layout wrapping the entire
+    design and the other to define the layout of the CardView. Both layouts have two child
+    views ("id/instructions_layout" has the header textview and a CardView.
+    "id/instructions_card_layout" has the instructions textview and the button that navigates
+    to the shoelist fragment) and both views are aligned in a vertical fashion. No constraints
+    are needed to achieve this design. -->
+
+    <LinearLayout
+        android:id="@+id/instructions_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/instructions_header"
             style="@style/InstructionsHeader"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/instructions"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="center"
+            android:text="@string/instructions" />
 
 
         <androidx.cardview.widget.CardView
@@ -29,11 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
-            app:cardCornerRadius="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/instructions_header">
-
+            app:cardCornerRadius="12dp" >
 
             <LinearLayout
                 android:id="@+id/instructions_card_layout"
@@ -64,5 +68,5 @@
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

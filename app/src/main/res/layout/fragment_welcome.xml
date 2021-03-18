@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.udacity.shoestore.ui.fragments.WelcomeViewModel" />
@@ -14,10 +13,14 @@
             type="com.udacity.shoestore.ui.fragments.WelcomeFragment" />
     </data>
 
+    <!-- Again, here I have chosen the constraint layout, because with using the constraints,
+    I have the ability to position the views in their relation to the layout, as opposed to
+    their relation to one another. This gives me the ability to overlap views and
+    created a better aesthetic for this fragment. -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
 
         <TextView
             android:id="@+id/welcome_textview"
