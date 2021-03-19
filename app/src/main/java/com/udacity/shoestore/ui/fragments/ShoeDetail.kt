@@ -29,7 +29,10 @@ class ShoeDetail : Fragment() {
         shoeDetailBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
         shoeDetailBinding.fragment = this
+        shoeDetailBinding.lifecycleOwner = this
+
         shoeViewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
+        shoeDetailBinding.viewModel = shoeViewModel
 
         return shoeDetailBinding.root
     }
@@ -44,15 +47,6 @@ class ShoeDetail : Fragment() {
 
     fun onCancelClick() {
         findNavController().popBackStack()
-    }
-
-    fun onSaveClick() {
-        shoeViewModel.prepareToAddShoe(
-            shoeDetailBinding.shoeNameEdittext.text.toString(),
-            shoeDetailBinding.shoeCompanyEdittext.text.toString(),
-            shoeDetailBinding.shoeDescriptionEdittext.text.toString(),
-            shoeDetailBinding.shoeSizeEdittext.text.toString()
-        )
     }
 
     private val errorObserver = Observer<String> { errorMessage ->

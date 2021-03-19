@@ -8,6 +8,8 @@ import java.util.*
 
 class ShoeViewModel : ViewModel() {
 
+    val newShoe = Shoe("", "", "", "")
+
     private val _shoeList = MutableLiveData<MutableList<Shoe>>()
     val shoeList: LiveData<MutableList<Shoe>> get() = _shoeList
 
@@ -17,27 +19,31 @@ class ShoeViewModel : ViewModel() {
     private val _shoeSaved by lazy { MutableLiveData<Boolean>() }
     val shoeSaved: LiveData<Boolean> get() = _shoeSaved
 
-    fun prepareToAddShoe(name: String, company: String, description: String, size: String) {
+    fun onSaveClick() {
+        prepareToAddShoe(newShoe)
+    }
+
+    private fun prepareToAddShoe(newShoe: Shoe) {
         _shoeSaved.value = false
         when {
-            name.isEmpty() -> {
+            newShoe.name?.isEmpty() == true -> {
                 _error.value = "Shoe Name"
             }
-            company.isEmpty() -> {
+            newShoe.company?.isEmpty() == true -> {
                 _error.value = "Shoe Company"
             }
-            description.isEmpty() -> {
+            newShoe.description?.isEmpty() == true -> {
                 _error.value = "Shoe Description"
             }
-            size.isEmpty() -> {
+            newShoe.size?.isEmpty() == true -> {
                 _error.value = "Shoe Size"
             }
             else -> {
                 val shoe = Shoe(
-                    name.capitalize(Locale.ROOT),
-                    size.capitalize(Locale.ROOT),
-                    company.capitalize(Locale.ROOT),
-                    description.capitalize(Locale.ROOT)
+                    newShoe.name?.capitalize(Locale.ROOT),
+                    newShoe.size?.capitalize(Locale.ROOT),
+                    newShoe.company?.capitalize(Locale.ROOT),
+                    newShoe.description?.capitalize(Locale.ROOT)
                 )
                 _shoeList.value?.add(shoe)
                 _shoeSaved.value = true

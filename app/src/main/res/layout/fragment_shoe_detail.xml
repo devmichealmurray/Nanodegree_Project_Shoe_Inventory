@@ -8,8 +8,8 @@
             name="fragment"
             type="com.udacity.shoestore.ui.fragments.ShoeDetail" />
         <variable
-            name="shoe"
-            type="com.udacity.shoestore.models.Shoe" />
+            name="viewModel"
+            type="com.udacity.shoestore.ui.fragments.ShoeViewModel" />
     </data>
 
     <!-- For this fragment, I have again, chosen a constraint layout. Three of the five child views
@@ -72,7 +72,7 @@
                     style="@style/EditTextFields"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:text="@={shoe.name}"
+                    android:text="@={viewModel.newShoe.name}"
                     android:inputType="text"
                     android:maxLines="1"
                     android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                     style="@style/EditTextFields"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:text="@={shoe.company}"
+                    android:text="@={viewModel.newShoe.company}"
                     android:inputType="text"
                     android:maxLines="1"
                     android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                     style="@style/EditTextFields"
                     android:layout_margin="8dp"
                     android:padding="8dp"
-                    android:text="@={shoe.size}"
+                    android:text="@={viewModel.newShoe.size}"
                     android:inputType="number"
                     android:maxLines="1"
                     android:layout_width="match_parent"
@@ -115,7 +115,7 @@
                     android:layout_margin="8dp"
                     android:padding="8dp"
                     android:inputType="text"
-                    android:text="@={shoe.size}"
+                    android:text="@={viewModel.newShoe.description}"
                     android:maxLines="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -145,7 +145,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="46dp"
             android:text="@string/save"
-            android:onClick="@{() -> fragment.onSaveClick()}"
+            android:onClick="@{() -> viewModel.onSaveClick()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cancel_button" />
